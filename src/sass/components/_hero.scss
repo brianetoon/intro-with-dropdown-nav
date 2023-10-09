@@ -1,0 +1,58 @@
+@use "../abstracts/" as *;
+
+.hero {
+  --container-padding: 0;
+  text-align: center;
+
+  .clients {
+    --flow-spacer: #{size('48')};
+  }
+
+  &__intro {
+    padding: size('20');
+
+    p { 
+      max-width: 30rem;
+      margin-inline: auto;
+    }
+  }
+
+  @include mq(medium) {
+    --container-padding: #{fluid-size('16-30')};
+    --flow-spacer: clamp(1.5rem, 0.8785rem + 2.6519vw, 3rem);
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-block: #{size('48')};
+
+    span {
+      display: block;
+    }
+
+    &__image {
+      width: 44%;
+    }
+
+    &__intro {
+      width: 51%;
+      padding: 0;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      
+      p {
+        margin-inline: 0;
+      }
+
+      &-text {
+        align-self: center;
+      }
+
+      .clients {
+        align-self: end;
+        max-width: 30rem;
+        --flow-spacer: 0;
+      }
+    }
+  }
+}

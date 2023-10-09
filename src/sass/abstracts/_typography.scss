@@ -1,4 +1,6 @@
-$ff-sans: system-ui, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+$ff-sans: 'Epilogue', system-ui, sans-serif;
 $ff-serif: serif;
 
 $ff-base: $ff-sans;
@@ -21,8 +23,10 @@ $font-sizes: (
   // Step 4: 33.18px → 48.83px
   '800': clamp(2.07rem, calc(1.70rem + 1.74vw), 3.05rem),
   // Step 5: 39.81px → 61.04px
-  '900': clamp(2.49rem, calc(1.99rem + 2.36vw), 3.82rem),
+  // '900': clamp(2.49rem, calc(1.99rem + 2.36vw), 3.82rem),
+
+  '900': clamp(2.1775rem, 1.1178rem + 4.5215vw, 4.735rem),
 );
 
-$fw-400: 400;
+$fw-400: 500;
 $fw-700: 700;

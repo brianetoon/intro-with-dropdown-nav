@@ -2,6 +2,9 @@
 @use "sass:math";
 @use "sass:map";
 @use "breakpoints" as *;
+@use "functions" as *;
+@use "sizes" as *;
+@use "typography" as *;
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
@@ -20,5 +23,24 @@
   } @else {
     @error 'the keyword #{$size} is not in the $breakpoints map';
   }
+}
+
+@mixin heading($fs, $color: clr(neutral, '900')) {
+  font-size: $fs;
+  color: $color;
+
+  font-weight: $fw-700;
+  line-height: 1;
+}
+
+@mixin flex-group($column-gap: 1rem, $row-gap: 1rem, $direction: row) {
+  display: flex;
+  flex-direction: var(--direction, $direction);
+
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+
+  // column-gap: var(--flex-column-gap, $flex-group-gap);
+  // row-gap: var(--flex-row-gap, calc($flex-group-gap / 2));
 }
   

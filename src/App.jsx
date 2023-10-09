@@ -1,9 +1,11 @@
-function App() {
+import './sass/main.scss'
+import Hero from './components/Hero'
 
+function App() {
   return (
-    <>
-      <p>dropdown challenge</p>
-    </>
+    <main>
+      <Hero />
+    </main>
   )
 }
 
